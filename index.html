@@ -180,17 +180,10 @@
 #s .hero h1 .h1b{display:block;font-size:.62em;line-height:1.15;margin-top:14px;color:var(--tom);font-style:italic}
 #s .hero h1{font-size:clamp(2.1rem,5.2vw,4rem)}
 #s .vframe{position:relative}
-#s .snd{position:absolute;top:12px;right:12px;z-index:3;border:0;border-radius:999px;padding:9px 16px;font:700 .9rem 'Nunito Sans',Arial,sans-serif;background:rgba(255,255,255,.92);color:#23301F;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.25)}
-#s .snd:hover{background:#fff}
+#s .snd{position:fixed;right:16px;bottom:16px;z-index:50;display:flex;align-items:center;justify-content:center;width:48px;height:48px;border:2px solid #fff;border-radius:50%;padding:0;font-size:1.35rem;line-height:1;background:#2F6B3A;color:#fff;cursor:pointer;box-shadow:0 6px 18px rgba(0,0,0,.3);-webkit-tap-highlight-color:transparent}
+#s .snd:hover{background:#E2553D}
+#s .snd:focus-visible{outline:3px solid #23301F;outline-offset:2px}
 @media(max-width:480px){#s nav .logo{font-size:1.25rem}}
-#s-gate{position:fixed;inset:0;z-index:9999;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;padding:24px;text-align:center;background:linear-gradient(160deg,#2F6B3A,#1d4a2a);color:#fff;font-family:'Nunito Sans',Arial,sans-serif;transition:opacity .35s}
-#s-gate.out{opacity:0;pointer-events:none}
-#s-gate .gl{font:700 clamp(2.2rem,8vw,3.6rem)/1.05 'Lora',Georgia,serif}
-#s-gate .gl b{color:#FFB48A;font-weight:700}
-#s-gate .gs{opacity:.9;font-size:1.1rem;max-width:22em}
-#s-gate button{font:800 1.15rem 'Nunito Sans',Arial,sans-serif;border:0;border-radius:999px;cursor:pointer}
-#s-gate .go{background:#E2553D;color:#fff;padding:18px 38px;box-shadow:0 10px 28px rgba(0,0,0,.3)}
-#s-gate .no{background:none;color:#fff;opacity:.8;text-decoration:underline;font-weight:600;font-size:.95rem;padding:8px}
 #s .cs{color:var(--soft);margin-bottom:26px}
 #s .cform{text-align:left;display:flex;flex-direction:column;gap:6px;background:#fff;border-radius:24px;padding:28px;box-shadow:0 18px 40px -26px rgba(35,48,31,.45)}
 #s .cform label{font-weight:800;font-size:.95rem;margin-top:10px;color:#23301F}
@@ -238,7 +231,7 @@
 <nav><div class="w"><a class="logo" href="#top">Start <span>Vegan</span> Today</a><a class="l" href="#top">Home</a><a class="l" href="#s-about">About</a><a class="l" href="#s-pk">Packages</a><a class="l" href="#s-mvp">MVP</a><a class="l" href="#s-rev">Reviews</a><a class="l" href="#s-faq">FAQ</a><a class="l" href="#s-contact">Contact</a><a class="btn sm" href="#s-contact">Book a call</a></div></nav>
 
 <section class="vid"><div class="w"><h1 class="vt"><span class="o">Are</span> <span class="p">you</span> <span class="o">ready</span> <span class="p">for</span> <span class="g">VEGAN??</span></h1>
-<div class="vframe"><video autoplay muted loop playsinline controls preload="auto" poster="images/video-poster.jpg" aria-label="Plant-based food video"><source src="video/plant-based-food.mp4" type="video/mp4"></video><button type="button" class="snd" aria-pressed="false">&#128266; Tap for sound</button></div></div></section><div class="banner"><img class="" src="images/coach-in-ocean.jpg" alt="Your coach in the ocean" style="object-position:50% 58%"></div><section class="hero"><div class="w"><div style="padding-bottom:80px">
+<div class="vframe"><video autoplay muted loop playsinline controls preload="auto" poster="images/video-poster.jpg" aria-label="Plant-based food video"><source src="video/plant-based-food.mp4" type="video/mp4"></video></div></div></section><div class="banner"><img class="" src="images/coach-in-ocean.jpg" alt="Your coach in the ocean" style="object-position:50% 58%"></div><section class="hero"><div class="w"><div style="padding-bottom:80px">
  <div class="cred"><i></i>Certified Life Coach since 2021</div>
  <h1>Eat Vegan. Eat Plant based!<span class="h1b">Love it, live it and thank me later!</span></h1>
  <p class="lead">Maybe you're vegan-curious. Maybe you're a vegetarian ready to level up. Maybe you want a little hand-holding, or you just need to know if the rumors are true. Whatever brought you here, you're in the right place. I'll be your guide, with honest support that makes plant-based eating fit your real life.</p>
@@ -328,18 +321,22 @@
 <div id="cf-ok" class="cok" role="status" hidden><h3>Thank you! Your message has been sent!</h3><p>Please give us 48 hours to get back to you.</p></div>
 </div></section>
 
+<button type="button" class="snd" aria-pressed="false" aria-label="Turn sound on" title="Turn sound on">&#128263;</button>
 <footer><div class="w"><a class="logo" href="#top">Start <span style="color:#E2553D">Vegan</span> Today</a><p style="margin-top:12px;max-width:40em">Vegan lifestyle education and personal coaching for people at every stage of the journey.</p>
 <div class="fine">General lifestyle education and coaching, not medical or nutritional advice. Please consult a qualified healthcare professional or registered dietitian about your individual needs. &copy; 2026 Tiffani Dance Coaching.</div></div></footer>
-</div><script>(function(){try{var v=document.querySelector('#s .vframe video'),b=document.querySelector('#s .snd');if(!v)return;
-function sync(){if(!b)return;var on=!v.muted&&v.volume>0;b.innerHTML=on?'&#128263; Sound off':'&#128266; Tap for sound';b.setAttribute('aria-pressed',on)}
-if(b)b.addEventListener('click',function(){if(!v.muted){v.muted=true}else{v.volume=.6;v.muted=false;var q=v.play();if(q&&q.catch)q.catch(function(){})}sync()});
-v.addEventListener('volumechange',sync);sync();
-var g=document.createElement('div');g.id='s-gate';g.setAttribute('role','dialog');g.setAttribute('aria-label','Welcome');
-g.innerHTML='<div class="gl">Start <b>Vegan</b> Today</div><div class="gs">Welcome! Turn your sound on for the full experience.</div><button type="button" class="go">&#128266; Tap to enter</button><button type="button" class="no">Enter without sound</button>';
-document.body.appendChild(g);
-function close(){g.classList.add('out');setTimeout(function(){if(g.parentNode)g.parentNode.removeChild(g)},400);window.scrollTo(0,0)}
-g.querySelector('.go').addEventListener('click',function(){v.volume=.6;v.muted=false;var p=v.play();if(p&&p.catch)p.catch(function(){v.muted=true;v.play();sync()});sync();close()});
-g.querySelector('.no').addEventListener('click',function(){close()});
+</div><script>(function(){try{
+var v=document.querySelector('#s .vframe video'),b=document.querySelector('#s .snd');if(!v)return;
+function isOn(){return !v.muted&&v.volume>0}
+function sync(){if(!b)return;var on=isOn();b.innerHTML=on?'&#128266;':'&#128263;';var t=on?'Turn sound off':'Turn sound on';b.setAttribute('aria-label',t);b.title=t;b.setAttribute('aria-pressed',on)}
+function soundOn(){v.volume=.6;v.muted=false;var q=v.play();if(q&&q.catch)q.catch(function(){v.muted=true;v.play();sync()});sync()}
+var started=false,evs=['pointerup','touchend','click','keydown'];
+function stop(){started=true;evs.forEach(function(t){document.removeEventListener(t,first,true)})}
+/* Start the sound on the visitor's first tap or key press anywhere on the page */
+function first(e){if(started)return;if(b&&b.contains(e.target))return;stop();soundOn()}
+evs.forEach(function(t){document.addEventListener(t,first,true)});
+/* Small corner button turns sound on and off */
+if(b)b.addEventListener('click',function(){stop();if(isOn()){v.muted=true}else{soundOn()}sync()});
+v.addEventListener('volumechange',function(){if(isOn())stop();sync()});sync();
 }catch(e){}})();</script><script>(function(){try{var f=document.getElementById('cform');if(!f)return;var msg=document.getElementById('cf-msg'),cnt=document.getElementById('cf-count'),err=document.getElementById('cf-err'),ok=document.getElementById('cf-ok'),btn=document.getElementById('cf-send');
 msg.addEventListener('input',function(){cnt.textContent=msg.value.length});
 f.addEventListener('submit',function(e){e.preventDefault();err.hidden=true;
