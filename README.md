@@ -17,7 +17,7 @@ Want your own domain (like `startvegantoday.com`)? Add it in the same **Pages** 
 
 | What | Where |
 |---|---|
-| **Square "Book Now" links** | `packages.html`: search for `PASTE SQUARE LINK` and replace `href="#"` with your Square link (5 buttons: 4 packages + the add-on). |
+| **Square payment links** | Already connected. To change one, open `packages.html` and search for `Square payment link`. |
 | **Photos** | Upload to `images/` and swap the dashed placeholder boxes. See `images/README.md`. |
 | **Your story** | `about.html`: search for `EDIT`. |
 | **Package descriptions** | `packages.html`: search for `EDIT`. The Planted Premium list needs your details. |
