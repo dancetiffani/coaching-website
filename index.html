@@ -224,11 +224,29 @@
 @media(max-width:480px){#s .pk summary img{width:68px;height:68px}#s .pk .pd{padding-left:0}#s .pk.p1 .pd{padding-left:22px}}
 #s .pk .bf-s{display:block;font-size:.92rem;font-weight:700;line-height:1.4;color:var(--leaf)}#s .pk.p1 .bf-s{color:#000}
 #s .pk .bf{display:block;background:#000;color:#FFD500;font-size:.95rem;font-weight:700;line-height:1.4;padding:6px 12px;border-radius:8px;align-self:flex-start}#s .pk .bf b{letter-spacing:.04em}
-#s .pk .pf{width:100%;max-width:420px;border-radius:14px;margin:0 0 18px;display:block}#s .pk.p1 .pf{border:3px solid #000}</style>
+#s .pk .pf{width:100%;max-width:420px;border-radius:14px;margin:0 0 18px;display:block}#s .pk.p1 .pf{border:3px solid #000}#s .mvpw{max-width:760px}
+#s .mvp-k{color:var(--tom);font-weight:800;margin-bottom:6px}
+#s .mvpw h2{font-size:clamp(2.2rem,4.4vw,3.4rem);margin-bottom:16px}
+#s .mvp-i{font-size:1.15rem;color:var(--soft);margin-bottom:34px}
+#s .mvp-card{background:#fff;border-radius:24px;overflow:hidden;box-shadow:0 18px 40px -26px rgba(35,48,31,.45)}
+#s .mvp-head{text-align:center;padding:30px 20px 22px}
+#s .mvp-t{font:700 clamp(2.6rem,9vw,3.6rem)/1 'Lora',Georgia,serif}
+#s .mvp-t .m{color:#7A4FB5}#s .mvp-t .v{color:#C9A227}#s .mvp-t .p{color:#2F8F46}
+#s .mvp-head p{font:italic 500 1.25rem 'Lora',Georgia,serif;color:#8a5a3c;margin:8px 0 0}
+#s .mvp-card img{width:100%;height:auto;display:block;background:#f6f1e8}
+#s .mvp-b{padding:28px 28px 30px}
+#s .mvp-b h3{font-size:clamp(1.6rem,4vw,2.1rem);margin-bottom:10px}
+#s .mvp-sub{font:italic 500 1.2rem 'Lora',Georgia,serif;color:var(--soft)}
+#s .mvp-sc{font:600 1.2rem 'Lora',Georgia,serif;margin:22px 0 6px}
+#s .mvp-l{list-style:none;padding:0;margin:0}
+#s .mvp-l li{padding:12px 0 12px 32px;position:relative;border-bottom:1px solid #e3ecdc}
+#s .mvp-l li:last-child{border-bottom:0}
+#s .mvp-l li::before{content:'\2713';position:absolute;left:4px;top:11px;color:var(--leaf);font-weight:800}
+</style>
 </head>
 <body>
 <div id="s"><a id="top"></a>
-<div class="promo">Monday Vegan Pick: one honest vegan find, every week. <a href="#s-mvp">See this week's</a></div>
+<div class="promo">Monday Vegan Prize: one honest vegan find, every week. <a href="#s-mvp">See this week's</a></div>
 <nav><div class="w"><a class="logo" href="#top">Start <span>Vegan</span> Today</a><a class="l" href="#top">Home</a><a class="l" href="#s-about">About</a><a class="l" href="#s-pk">Packages</a><a class="l" href="#s-mvp">MVP</a><a class="l" href="#s-rev">Reviews</a><a class="l" href="#s-faq">FAQ</a><a class="l" href="#s-contact">Contact</a><a class="btn sm" href="#s-contact">Book a call</a></div></nav>
 
 <section class="vid"><div class="w"><h1 class="vt"><span class="o">Are</span> <span class="p">you</span> <span class="o">ready</span> <span class="p">for</span> <span class="g">VEGAN??</span></h1>
@@ -293,10 +311,22 @@
  <div class="addon"><h3>Add phone, email and text support</h3><p>Add it to any package for one month of extra support between sessions. One-time payment for one month, no automatic renewal. Buy again any time for another month. Coaching questions only, not emergency support.</p><b style="font:600 1.6rem 'Lora',serif;color:var(--leaf)">$60 for 1 month</b><!-- Square payment link: support add-on --><a class="btn sm" href="https://square.link/u/xNrL4NNO" target="_blank" rel="noopener">Buy Now</a></div></div></section>
 
 <div class="strip"><img class="" src="images/green-shrubs.jpg" alt="Green shrubs" style="object-position:50% 50%"></div>
-<section class="sect" style="background:var(--wash)" id="s-mvp"><div class="w mvp"><div class="ph"><img class="" src="images/organic-envy-apple.jpg" alt="Organic Envy apple" style="object-position:50% 50%"></div>
- <div><p style="color:var(--tom);font-weight:800;margin-bottom:6px">Every Monday</p><h2>MVP: Monday Vegan Pick 🏆</h2>
- <p style="font-size:1.15rem;color:var(--soft)">One vegan find a week, a product or a restaurant, with my honest take: why it's worth it, who it's for, and where to find it.</p>
- <a class="btn ghost" href="#top">Read this week's MVP</a></div></div></section>
+<section class="sect" style="background:var(--wash)" id="s-mvp"><div class="w mvpw">
+ <p class="mvp-k">Every Monday</p>
+ <h2>MVP: Monday Vegan Prize</h2>
+ <p class="mvp-i">Each week I highlight one vegan find worth knowing about: a product, a restaurant, whatever earned it. No sponsored fluff, no encyclopedia of every vegan thing on earth, just what's actually worth your time or money.</p>
+ <!-- MVP: update this card each Monday (photo, title, subtitle, text and checklist) -->
+ <article class="mvp-card">
+  <div class="mvp-head"><div class="mvp-t"><span class="m">M</span><span class="v">V</span><span class="p">P</span> <span aria-hidden="true">🏆</span></div><p>This week's find</p></div>
+  <img src="images/mvp-so-delicious-bananas-foster.jpg" alt="A pint of So Delicious Dairy Free Bananas Foster cashewmilk frozen dessert with scoops on top" loading="lazy">
+  <div class="mvp-b">
+   <h3>Bananas Foster: So Delicious Dairy Free</h3>
+   <p class="mvp-sub">Who said vegans can't have ice cream?</p>
+   <p>Not only can they have ice cream, but they can have really, pretty darn good ice cream at that! I love a lot of the So Delicious flavors and desserts, but this Bananas Foster had me in a chokehold from the first creamy spoonful.</p>
+   <p class="mvp-sc">Want the "scoop"?</p>
+   <ul class="mvp-l"><li>Dairy free</li><li>Same ice cream flavor, minus the moo</li><li>Affordable</li><li>Great for non-vegans to enjoy too</li><li>Cashew-based</li></ul>
+  </div>
+ </article></div></section>
 
 <section class="sect" id="s-rev"><div class="w"><h2 style="font-size:clamp(2.2rem,4.4vw,3.4rem);text-align:center">What clients say</h2><div class="quotes" style="--x:0"><div class="quote"><p>"[Add a real client quote about feeling less overwhelmed.]"</p><b>[Client name]</b></div><div class="quote"><p>"[Add a real client quote about feeling supported, not judged.]"</p><b>[Client name]</b></div><div class="quote"><p>"[Add a real client quote about accountability.]"</p><b>[Client name]</b></div></div></div></section>
 
