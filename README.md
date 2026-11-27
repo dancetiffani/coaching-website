@@ -21,6 +21,13 @@ Want your own domain (like `startvegantoday.com`)? Add it in the same **Pages** 
 | **Client reviews** | Search for `[Add a real client quote` and `[Client name]`. |
 | **Photos** | Replace a file in `images/` with one of the same name, or change the `src="images/..."` path. |
 
+## MVP: Monday Vegan Prize (weekly)
+
+Each Monday the new MVP **replaces** the old one completely. Do not keep or show previous picks.
+
+1. In `index.html`, find the comment `MVP: update this card each Monday` and replace the photo, title, subtitle, review text and checklist.
+2. Add the new photo to `images/` and **delete the previous MVP photo** from `images/`.
+
 ## Contact form
 
 The form sends to **StartVeganToday@gmail.com** using [FormSubmit](https://formsubmit.co), a free service (no account needed).
